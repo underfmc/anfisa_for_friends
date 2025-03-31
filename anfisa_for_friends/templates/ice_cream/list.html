@@ -1,19 +1,19 @@
-<!-- ice_cream/ice_cream_list.html -->
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <title>Анфиса для друзей. Список мороженого</title>
-  </head>
-  <body>
-    <header>
-      <p>Место для логотипа</p>
-      <nav>Навигация</nav>
-    </header>
-    <main>
-      <h1>Каталог мороженого</h1>
-    </main>
-    <footer>
-      <p>Копирайт, год создания</p>
-    </footer>  
-  </body>
-</html>
+{% extends "base.html" %}
+{% block title %}
+  Анфиса для друзей. Список мороженого
+{% endblock %}
+{% block content %}
+  <h1>Каталог мороженого</h1>
+  <!-- Здесь выведите все сорта мороженого: заголовок и описание для каждого. -->
+  <ul>
+    {% for ice_cream in ice_cream_catalog %}
+    <li>
+      <h3>{{ ice_cream.title }}</h3>
+      <p>{{ ice_cream.description }}</p>
+    </li>
+    {% if not forloop.last %}
+    <hr>
+    {% endif %}
+    {% endfor %}
+  </ul>
+{% endblock %}

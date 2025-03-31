@@ -1,0 +1,14 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Анфиса для друзей. Главная</title>
+  </head>
+  <body>
+    {% include 'includes/header.html' %}
+    <main>
+      {% block content %}<p>Контент</p>{% endblock %}
+    </main>
+    {% include 'includes/footer.html' %}
+  </body>
+</html>

@@ -1,19 +1,7 @@
-<!-- homepage/index.html -->
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <title>Анфиса для друзей. Главная</title>
-  </head>
-  <body>
-    <header>
-      <p>Место для логотипа</p>
-      <nav>Навигация</nav>
-    </header>
-    <main>
-      <h1>Главная страница</h1>
-    </main>
-    <footer>
-      <p>Копирайт, год создания</p>
-    </footer>    
-  </body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}<title>Анфиса для друзей. Главная страница</title>{% endblock %}
+
+{% block content %}
+  <h1>Главная страница</h1>
+{% endblock %}

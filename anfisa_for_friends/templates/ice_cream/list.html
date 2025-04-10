@@ -8,7 +8,7 @@
     {% for ice_cream in ice_cream_catalog %}
     <li>
       <h3>{{ ice_cream.title }}</h3>
-      <p>{{ ice_cream.description|linebreaksbr }}</p>
+      <p>{{ ice_cream.description|truncatewords:5 }}</p>
     </li>
     <a href="{% url 'ice_cream:ice_cream_detail' ice_cream.id %}">Подробнее</a>
     {% if not forloop.last %}
